@@ -1,0 +1,51 @@
+const ParrotQueue = require("./Queue");
+
+test("creates a queue", () => {
+  const queue = ParrotQueue();
+});
+
+test("has a size", () => {
+  const queue = ParrotQueue();
+  expect(queue.size()).toBe(0);
+});
+
+test("should enqueue elements", () => {
+  const queue = ParrotQueue();
+  const data = { some: "data" };
+  const data2 = { some: "data" };
+  const data3 = { some: "more data" };
+  queue.enqueue(data);
+  queue.enqueue(data2);
+  queue.enqueue(data3);
+  expect(queue.size()).toBe(3);
+});
+
+test("should dequeue elements", () => {
+  const queue = ParrotQueue();
+  const data = { some: "data" };
+  const data2 = { some: "data" };
+  const data3 = { some: "more data" };
+  queue.enqueue(data);
+  queue.enqueue(data2);
+  queue.enqueue(data3);
+  expect(queue.dequeue()).toEqual(data);
+  expect(queue.dequeue()).toEqual(data2);
+  expect(queue.dequeue()).toEqual(data3);
+  expect(queue.size()).toBe(0);
+});
+
+test("should peek elements", () => {
+  const queue = ParrotQueue();
+  const data = { some: "data" };
+  const data2 = { some: "data" };
+  const data3 = { some: "more data" };
+  queue.enqueue(data);
+  queue.enqueue(data2);
+  queue.enqueue(data3);
+  expect(queue.peek()).toEqual(data);
+  expect(queue.peek()).toEqual(data);
+  expect(queue.size()).toBe(3);
+  queue.dequeue();
+  expect(queue.peek()).toEqual(data2);
+  expect(queue.size()).toBe(2);
+});

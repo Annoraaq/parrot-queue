@@ -1,0 +1,31 @@
+{
+  "name": "parrot-queue",
+  "version": "1.0.0",
+  "description": "An efficient queue in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annoraaq/parrot-queue.git"
+  },
+  "keywords": [
+    "Queue",
+    "Data",
+    "Structures",
+    "Coding",
+    "Interview",
+    "JavaScript",
+    "Algorithms"
+  ],
+  "author": "Johannes Baum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Annoraaq/parrot-queue/issues"
+  },
+  "homepage": "https://github.com/Annoraaq/parrot-queue#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
