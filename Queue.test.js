@@ -49,3 +49,12 @@ test("should peek elements", () => {
   expect(queue.peek()).toEqual(data2);
   expect(queue.size()).toBe(2);
 });
+
+test("should reset head if queue is empty", () => {
+  const queue = ParrotQueue();
+  queue.enqueue(1);
+  expect(queue.dequeue()).toEqual(1);
+  queue.enqueue(2);
+  queue.enqueue(3);
+  expect(queue.dequeue()).toEqual(2);
+});

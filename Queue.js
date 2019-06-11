@@ -31,6 +31,7 @@ module.exports = () => {
     const tailData = tail.data;
     if (tail.prev === null) {
       tail = null;
+      head = null;
       return tailData;
     }
 
